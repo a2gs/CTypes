@@ -1,4 +1,4 @@
-CFLAGS_OPTIMIZATION = -g
+#CFLAGS_OPTIMIZATION = -g
 #CFLAGS_OPTIMIZATION = -O3
 CFLAGS_VERSION = -std=c11
 CFLAGS_WARNINGS = -Wall -Wextra -Wno-unused-parameter -Wno-unused-but-set-parameter -Wno-unused-result
