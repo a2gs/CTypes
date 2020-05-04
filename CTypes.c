@@ -29,6 +29,8 @@ char * endian(void)
 	return(NULL);
 }
 
+extern char etext, edata, end; /* The symbols must have some type, or "gcc -Wall" complains */
+
 int main(int argc, char *argv[])
 {
 	/*
@@ -156,6 +158,11 @@ int main(int argc, char *argv[])
 	#ifdef _FORTIFY_SOURCE
 		printf("_FORTIFY_SOURCE defined\n");
 	#endif
-	
+
+	printf("First address past:\n");
+	printf("\tProgram text (etext) ...:  %10p\n", &etext);
+	printf("\tInitialized data (edata):  %10p\n", &edata);
+	printf("\tUninitialized data (end):  %10p\n", &end);
+
 	return(0);
 }
